@@ -1,6 +1,30 @@
-# Demo of Creation of CI Build Process
+# Demo of Build Process
 
-## Create a CI Build in CircleCI
+## Build Process Requisites
+
+Objective: Upload the Java App JAR to a Nexus Repository 
+
+a. Installed and Run Nexus on Digital Ocean (Ubuntu)
+b. Opened port 8081 by modifying Networking settings.
+c. When you run Nexus, the app creates a default repository.
+d. Open the pom.xml and configure Nexus URL
+e. Added credentials within .m2 so that Nexus allow me to upload remotely.
+f. Once all of these requisites are done, I followed these steps:
+
+Step 1: Build the JAR (mvn package)
+
+![Lighthouse Report](/images/builtmvpackageprocess.png)
+
+Step 1: Deploy JAR to Nexus (mvn deploy)
+
+![Lighthouse Report](/images/mvndeploy.png)
+
+Step 1: Review Artifact in Nexus Repository
+
+![Lighthouse Report](/images/artifactjavamaven.png)
+
+
+## Build in CircleCI
 
 Step 1: Create a config file
 
